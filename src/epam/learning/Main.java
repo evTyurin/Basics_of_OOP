@@ -1,69 +1,33 @@
 package epam.learning;
 
+import epam.learning.ex1.Directory;
 import epam.learning.ex1.TextFile;
+
+import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) {
 
-//        Directory dir = new Directory();
-//        dir.showDirectoryPath();
-//        dir.addDirectory("hello");
-//        dir.showDirectoryPath();
-//        dir.addDirectory("hello");
-//        dir.showDirectoryPath();
-//        dir.addDirectory("hello");
-//        dir.showDirectoryPath();
-//        dir.deleteCurrentDirectory();
-//        dir.showDirectoryPath();
+        Directory directory = new Directory("D:\\testDirectory");
 
-//        RegularFile regFile = new RegularFile();
-//        regFile.getDirectory().addDirectory("lol");
-//        regFile.createFile("tot");
-//        regFile.createFile("hot");
-//        System.out.println(regFile.getDirectory().getDirectoryPath());
-//        regFile.showAllDirectoryFiles(regFile.getDirectory());
-//        regFile.deleteFile("tot");
-//        System.out.println(regFile.getDirectory().getDirectoryPath());
-//        regFile.renameFile("hot", "wrot");
+        TextFile textFile1 = new TextFile("D:\\testDirectory\\first.txt");
 
-        TextFile regFile = new TextFile();
-        regFile.getDirectory().addDirectory("lol");
-        regFile.createFile("tot.txt");
-        regFile.createFile("hot.txt");
-        System.out.println(regFile.getDirectory().getDirectoryPath());
-        regFile.showAllDirectoryFiles(regFile.getDirectory());
-//        regFile.deleteFile("tot");
-//        System.out.println(regFile.getDirectory().getDirectoryPath());
-        regFile.renameFile("hot.txt", "wrot.txt");
-//        regFile.deleteFile("wrot");
-//        regFile.writeIntoFile("wrot.txt", "dfdfd");
-        regFile.readFromFile("wrot.txt");
-//        regFile.writeIntoFile("wrot.txt","444444");
-        regFile.writeIntoFile("wrot.txt", " 88888");
-        regFile.readFromFile("wrot.txt");
+        TextFile textFile2 = new TextFile("D:\\testDirectory", "second.nnn");
+
+        TextFile textFile3 = new TextFile("D:\\testDirectory", "third.doc");
+
+        textFile1.append("Hello friend!");
+        textFile1.append("Nice to meet you");
+
+        textFile1.renameTo("newFirst.doc");
+
+        textFile1.delete();
+
+        textFile1.renameTo("superFirst.txt");
 
 
 
-
-//        dir.addDirectory("abcd");
-//        File newDirectory = new File(dir.getStringBuilder().toString());
-//        try
-//        {
-//            boolean creat = newDirectory.mkdir();
-//            boolean created = newFile.createNewFile();
-//            if(created)
-//                System.out.println("File has been created");
-//        }
-//        catch(IOException ex){
-//
-//            System.out.println(ex.getMessage());
-//        }
-//        System.out.println(newDirectory.getPath());
-//
-//        Directory directory = new Directory();
-//        directory.showDirectory();
-//        directory.addDirectory("mydoc");
 
 
     }
