@@ -108,7 +108,7 @@ public class TextFile extends File {
         if (check(newFileName)) {
 
             try (Scanner scanner = new Scanner(new File(filePath.toString()));
-                 FileWriter fileWriter = new FileWriter(path)){
+                 FileWriter fileWriter = new FileWriter(path))  {
                 StringBuilder fileText = new StringBuilder();
 
                 while (scanner.hasNextLine()) {
